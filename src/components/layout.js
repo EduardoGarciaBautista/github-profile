@@ -5,9 +5,9 @@ const LayoutStyled = styled.main`
   max-inline-size: 75rem;
   margin: auto;
   padding-inline: 20px;
+  padding-block: 2.5rem;
   @media screen and (min-width: 768px) {
     display: grid;
-    border: 1px solid red;
     grid-template-areas:
       "profile filters"
       "profile list";
