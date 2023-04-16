@@ -2,9 +2,9 @@ import React, {useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import Overlay from "./overlay";
 import styled from "styled-components";
-import {ButtonContrast} from "./button";
 import InputTextStyled from "./input-text";
 import ReactDom from "react-dom";
+import Button from "./button";
 
 const modalRoot = document.getElementById('portal');
 
@@ -14,7 +14,6 @@ const ModalContentStyled = styled.form`
   inset-inline-start: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg);
-  color: var(--white);
   padding: 1.5rem;
   border-radius: 0.5rem;
   display: flex;
@@ -42,7 +41,7 @@ function ModalContent({setIsActive}) {
             <ModalContentStyled ref={form} onSubmit={handleSubmit}>
                 <h2 className="title">Search anu user</h2>
                 <InputTextStyled name="userName" type="text" placeholder="User Name" autoComplete="off"/>
-                <ButtonContrast text="Search" type="submit"/>
+                <Button text="Search" type="submit"/>
             </ModalContentStyled>
         </Overlay>
     )

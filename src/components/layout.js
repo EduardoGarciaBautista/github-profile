@@ -11,7 +11,7 @@ const LayoutStyled = styled.main`
     grid-template-areas:
       "profile filters"
       "profile list";
-    grid-template-columns: 278px 1fr;
+    grid-template-columns: 320px 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 2rem;
   }

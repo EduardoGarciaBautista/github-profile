@@ -50,7 +50,7 @@ function Index({ name, ...rest }) {
 }
 Index.defaultProps = {
   size: 16,
-  color: "white",
+  color: "#8a9eb4",
 };
 
 export default Index;

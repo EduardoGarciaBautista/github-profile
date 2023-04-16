@@ -1,11 +1,12 @@
-import { createGlobalStyle } from "styled-components";
+import {createGlobalStyle} from "styled-components";
 
 const GlobalStylesStyled = createGlobalStyle`
-:root {
+  :root {
     --primary: #57a6ff;
     --buttonBG: #22262c;
     --white: #fffffe;
-    --bg: #0d1117;
+    //--bg: #0d1117;
+    --bg: #e6eef6;
     --black: #141414;
     --black-1: #171b21;
     --grey: #8b949e;
@@ -25,12 +26,14 @@ const GlobalStylesStyled = createGlobalStyle`
     --caption-regular: 400 0.75rem/1.125rem Inter;
     --caption-medium: 500 0.75rem/1.125rem Inter;
     --btn-bg: #15223A;
+    --dark-gray: #a1afbe
   }
- body {
+
+  body {
     background: var(--bg);
     color: var(--grey);
     font: var(--body1-regular);
- } 
+  }
 `;
 
 export default GlobalStylesStyled;
