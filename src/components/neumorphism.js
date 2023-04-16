@@ -8,6 +8,9 @@ export const NeumorphismCard = styled.div`
   @media (max-width: 576px) {
     padding: 1rem;
   }
+  @media (prefers-color-scheme: dark) {
+    box-shadow: -3px -3px 5px 0 var(--white-card), 3px 3px 5px 0 var(--dark-gray);
+  }
 `;
 
 export const NeumorphismLarge = styled(NeumorphismCard)`
@@ -20,6 +23,9 @@ export const NeumorphismLarge = styled(NeumorphismCard)`
     box-shadow: inset -2px -2px 5px 0 var(--white-card), inset 2px 2px 5px 0 var(--dark-gray);
   }
 
+  @media (prefers-color-scheme: dark) {
+    box-shadow: -3px -3px 5px 0 var(--white-card), 3px 3px 5px 0 var(--dark-gray);
+  }
 `;
 
 export const NeumorphismSmall = styled(NeumorphismLarge)`
