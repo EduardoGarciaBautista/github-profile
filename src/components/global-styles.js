@@ -2,15 +2,10 @@ import {createGlobalStyle} from "styled-components";
 
 const GlobalStylesStyled = createGlobalStyle`
   :root {
-    --primary: #57a6ff;
-    --buttonBG: #22262c;
     --white: #fffffe;
-    //--bg: #0d1117;
     --bg: #e6eef6;
-    --black: #141414;
-    --black-1: #171b21;
-    --grey: #8b949e;
-    --grey-1: #c5ced7;
+    --grey: #394d70;
+    --grey-1: #546686;
     --grey-2: #3f4954;
     --pink: #cc68a0;
     --yellow: #f1e05a;
@@ -26,13 +21,26 @@ const GlobalStylesStyled = createGlobalStyle`
     --caption-regular: 400 0.75rem/1.125rem Inter;
     --caption-medium: 500 0.75rem/1.125rem Inter;
     --btn-bg: #15223A;
-    --dark-gray: #a1afbe
+    // Custom colors
+    --dark-gray: #a1afbe;
+    --darkest-grey: #9fb0c5;
+    --white-card: #fffffe;
+    --orange: #FF4C29;
   }
 
   body {
     background: var(--bg);
     color: var(--grey);
     font: var(--body1-regular);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #212121;
+      --dark-gray: #1b1a1a;
+      --white-card: #2b2b2b;
+      --grey: #f1b13c;
+    }
   }
 `;
 

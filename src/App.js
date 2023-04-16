@@ -16,6 +16,8 @@ function App() {
     const [user, setUser] = useState({});
     const [repo, setRepos] = useState([]);
     const [isActive, setIsActive] = useState(false);
+    const [search, setSearch] = useState('');
+    const [language, setLanguage] = useState('');
 
 
     useEffect(() => {
@@ -39,8 +41,8 @@ function App() {
         <Layout>
             <Modal isActive={isActive} setIsActive={setIsActive}/>
             <Profile {...user} />
-            <Filters/>
-            <RepoList repoList={repo}/>
+            <Filters setSearch={setSearch} repoCount={repo.length} setLanguage={setLanguage}/>
+            <RepoList repoList={repo} search={search} language={language}/>
             <Search setIsActive={setIsActive}/>
         </Layout>
     );

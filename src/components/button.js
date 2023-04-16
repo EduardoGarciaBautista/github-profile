@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {isValidElement} from "react";
-import {NeumorphismLarge} from "./card";
+import {NeumorphismLarge} from "./neumorphism";
 
 const ButtonStyled = styled.button`
   gap: 0.5rem;
@@ -15,6 +15,7 @@ const ButtonStyled = styled.button`
   font: var(--button);
   border: none;
   background: none;
+  color: var(--grey);
 
   &:hover {
     text-decoration: none;

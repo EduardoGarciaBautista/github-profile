@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Language from "./language";
 import Index from "../icon";
-import {NeumorphismSmall} from "./card";
+import {NeumorphismLarge, NeumorphismSmall} from "./neumorphism";
 
 const RepoItemStyled = styled.div`
   padding-block: 1rem;
@@ -20,8 +20,8 @@ const RepoItemStyled = styled.div`
     margin: 0;
 
     a {
-      color: var(--primary);
       text-decoration: none;
+      color: var(--grey);
 
       :first-letter {
         text-transform: uppercase;
@@ -43,15 +43,16 @@ const RepoItemStyled = styled.div`
 
   .topic-list {
     display: flex;
-    column-gap: 0.25rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
   }
 
   .topic-item {
-    color: var(--primary);
-    background-color: var(--btn-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
     font: var(--caption-medium);
-    padding: 0.25rem 0.75rem;
-    border-radius: 38px;
   }
 
   .details {
@@ -60,7 +61,6 @@ const RepoItemStyled = styled.div`
     font: var(--caption-regular);
 
     &-item {
-      color: var(--grey-1);
       display: flex;
       gap: 0.5rem;
       align-items: center;
@@ -70,6 +70,7 @@ const RepoItemStyled = styled.div`
       }
     }
   }
+  
 `;
 
 function RepoItem(props) {
@@ -88,35 +89,38 @@ function RepoItem(props) {
 
             {props.description && <p className="description">{props.description}</p>}
 
-            {props.topics.length ? (
+            {props.topics.length > 0 &&
                 <div className="topic-list">
                     {props.topics.map((topic) => (
-                        <span className="topic-item" key={topic}>
-              {topic}
-            </span>
+                        <NeumorphismLarge key={topic}>
+                            <span className="topic-item">
+                                {topic}
+                            </span>
+                        </NeumorphismLarge>
+
                     ))}
                 </div>
-            ) : null}
+            }
 
             <div className="details">
                 {props.language ? <Language name={props.language}/> : null}
                 <span className="details-item">
-          <NeumorphismSmall>
-            <Index name="branch"/>
-          </NeumorphismSmall>
-          <span>{props.stargazers_count}</span>
-        </span>
+                    <NeumorphismSmall>
+                        <Index name="branch"/>
+                    </NeumorphismSmall>
+                    <span>{props.stargazers_count}</span>
+                </span>
 
                 <span className="details-item">
-          <NeumorphismSmall>
-            <Index name="star"/>
-          </NeumorphismSmall>
-          <span>{props.forks_count}</span>
-        </span>
+                    <NeumorphismSmall>
+                        <Index name="star"/>
+                    </NeumorphismSmall>
+                    <span>{props.forks_count}</span>
+                 </span>
 
                 <span className="details-item">
-          <span> {timeAgo} </span>
-        </span>
+                    <span> {timeAgo} </span>
+                </span>
             </div>
         </RepoItemStyled>
     );

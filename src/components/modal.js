@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import Overlay from "./overlay";
 import styled from "styled-components";
@@ -20,6 +20,8 @@ const ModalContentStyled = styled.form`
   flex-direction: column;
   gap: 1rem;
   inline-size: 24rem;
+  align-items: center;
+  border: 1px solid var(--dark-gray);
 
   .title {
     font: var(--headline2-semi-bold);
@@ -39,8 +41,8 @@ function ModalContent({setIsActive}) {
     return (
         <Overlay>
             <ModalContentStyled ref={form} onSubmit={handleSubmit}>
-                <h2 className="title">Search anu user</h2>
-                <InputTextStyled name="userName" type="text" placeholder="User Name" autoComplete="off"/>
+                <h2 className="title">Search your GitHub user</h2>
+                <InputTextStyled name="userName" type="text" placeholder="Example: eduardogarciabautista" autoComplete="off"/>
                 <Button text="Search" type="submit"/>
             </ModalContentStyled>
         </Overlay>

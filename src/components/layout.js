@@ -15,6 +15,7 @@ const LayoutStyled = styled.main`
     grid-template-rows: auto 1fr;
     column-gap: 2rem;
   }
+  
 `;
 
 function Layout({ children }) {
