@@ -119,7 +119,7 @@ function Profile(props) {
                     {<Index name="location"/>} {location}
                 </p>
 
-                <a className="blog info" href={blog} target="_blank" rel="norefer">
+                <a className="blog info" href={blog} target="_blank" rel="noreferrer">
                     {<Index name="link"/>} {blog}
                 </a>
                 <a
