@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EduardoGarciaBautista/github-profile/static/css/main.e6c13ad2.css",
+    "main.js": "/EduardoGarciaBautista/github-profile/static/js/main.2f4feebf.js",
+    "index.html": "/EduardoGarciaBautista/github-profile/index.html",
+    "main.e6c13ad2.css.map": "/EduardoGarciaBautista/github-profile/static/css/main.e6c13ad2.css.map",
+    "main.2f4feebf.js.map": "/EduardoGarciaBautista/github-profile/static/js/main.2f4feebf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.2f4feebf.js"
+  ]
+}
